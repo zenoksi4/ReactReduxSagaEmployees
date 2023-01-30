@@ -1,15 +1,11 @@
 import api from "modules/api/api";
 import { JOBS } from "modules/api/endpoints";
 import { useEffect } from "react"
+import { useSelector } from "react-redux";
 
 export default function Jobs() {
-    useEffect(() => {
-            async function fetchData() {
-                const response = await api.fetch(JOBS);
-
-                console.log(response);
-        } fetchData();
-    } , []);
+    const state = useSelector(state => state)
+    console.log(state)
 
     return(
         <div>
