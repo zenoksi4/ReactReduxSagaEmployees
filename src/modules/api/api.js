@@ -1,4 +1,4 @@
-import ENDPOINTS from "modules/api/endpoints";
+import ENDPOINTS from 'modules/api/endpoints';
 
 const BASE_URL = 'https://5f7998dbe402340016f9321f.mockapi.io/api/v1';
 
@@ -21,4 +21,4 @@ class Api {
     }
 }
 
-export default new Api(BASE_URL, ENDPOINTS);
+export default new Api(BASE_URL, ENDPOINTS)

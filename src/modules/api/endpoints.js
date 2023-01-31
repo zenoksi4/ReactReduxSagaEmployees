@@ -1,5 +1,5 @@
 export const JOBS = 'jobs';
-export const EMPLOYEES = 'employees'
+export const EMPLOYEES = 'employees';
 
 const ENDPOINTS = {
     [JOBS]: {

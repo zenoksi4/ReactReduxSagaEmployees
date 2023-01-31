@@ -4,8 +4,8 @@ import Jobs from "components/Jobs";
 function App() {
   return (
     <div>
-      <Jobs />
       <Employees />
+      <Jobs />
     </div>
   );
 }
