@@ -1,18 +1,10 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -31,7 +23,11 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
+      
+      <Typography sx={{textAlign: 'center', alignItems: 'center'}} variant="h6" noWrap component="div">
+            Jobs
+      </Typography>
+
       <Divider />
       <List>
         {loading || !services ? (
@@ -39,11 +35,7 @@ function ResponsiveDrawer(props) {
             <CircularProgress />
           </Grid>
         ) :(services.map(({ id, jobId, title }) => (
-            <ListItem key={id} disablePadding>
-                <ListItemButton>
-                    <ListItemText primary={title} />
-                </ListItemButton>
-            </ListItem>
+            <ServiceItem id={id} jobId={jobId} title={title}></ServiceItem>
           )))}
       </List>
     </div>
@@ -71,7 +63,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            Employees
           </Typography>
         </Toolbar>
       </AppBar>

@@ -12,7 +12,7 @@ export default function Jobs() {
         performFetch();
     }, [performFetch]); 
 
-    console.log(response);
+
     return(
         <Navigation loading={loading} services={data}/>
 
