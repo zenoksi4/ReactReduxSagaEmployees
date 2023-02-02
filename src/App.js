@@ -1,12 +1,20 @@
+import { Box } from "@mui/material";
 import Employees from "components/Employees";
 import Jobs from "components/Jobs";
 
+
+
 function App() {
+
   return (
-    <div>
-      <Employees />
+    <Box sx={{ display: 'flex' }}>
       <Jobs />
-    </div>
+      <main>
+        <div>
+          <Employees />
+        </div>
+      </main>
+    </Box>
   );
 }
 

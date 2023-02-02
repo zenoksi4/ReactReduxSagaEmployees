@@ -12,7 +12,7 @@ const useFetch = (endpoint) => {
     const performFetch = useCallback(data => dispatch(apiActions.fetch(endpoint, data)), [endpoint, dispatch]);
     const response = useMemo(() => apiState[camelCase(endpoint)], [apiState, endpoint]);
 
-    return [response, performFetch];  
+    return {response, performFetch};  
 }
 
 export default useFetch;
